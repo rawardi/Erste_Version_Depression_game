@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm466iftcpayn"]
+[gd_scene load_steps=4 format=3 uid="uid://cm466iftcpayn"]
 
 [ext_resource type="Script" path="res://Scene/game.gd" id="1_3ggjx"]
 [ext_resource type="Script" path="res://Scene/command_processor.gd" id="2_adt2e"]
-[ext_resource type="Script" path="res://Scene/panel_container.gd" id="3_ge18f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs072"]
 bg_color = Color(0.158407, 0.211757, 0.20661, 1)
@@ -32,7 +31,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qs072")
-script = ExtResource("3_ge18f")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
