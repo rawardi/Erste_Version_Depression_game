@@ -40,21 +40,20 @@ theme_override_constants/margin_right = 90
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
-alignment = 1
 
 [node name="Picture" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="Image" type="Sprite2D" parent="PanelContainer/MarginContainer/VBoxContainer/Picture"]
-position = Vector2(68, 73)
-script = ExtResource("3_y1cfv")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer/Picture"]
 layout_mode = 2
 
 [node name="result" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/Picture/ScrollContainer"]
 layout_mode = 2
+
+[node name="Image" type="Sprite2D" parent="PanelContainer/MarginContainer/VBoxContainer/Picture"]
+position = Vector2(67, 66)
+script = ExtResource("3_y1cfv")
 
 [node name="input" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(20, 20)
@@ -64,6 +63,4 @@ layout_mode = 2
 layout_mode = 2
 
 [connection signal="child_entered_tree" from="." to="PanelContainer/MarginContainer/VBoxContainer/Picture/Image" method="_on_game_child_entered_tree"]
-[connection signal="image_changed" from="." to="PanelContainer/MarginContainer/VBoxContainer/Picture/Image" method="_on_game_image_changed"]
 [connection signal="text_submitted" from="PanelContainer/MarginContainer/VBoxContainer/input/LineEdit" to="." method="_on_line_edit_text_submitted"]
-[connection signal="text_submitted" from="PanelContainer/MarginContainer/VBoxContainer/input/LineEdit" to="CommandProcessor" method="_on_line_edit_text_submitted"]
