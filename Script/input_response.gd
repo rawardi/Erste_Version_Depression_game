@@ -8,4 +8,4 @@ func _ready() -> void:
 
 func set_text(Input:String , Response: String) :
 	$InputHistory.text =">"+Input
-	$Label.text=Response
+	$response.text=Response

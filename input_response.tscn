@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds1had0d7mt1r"]
+[gd_scene load_steps=3 format=3 uid="uid://ds1had0d7mt1r"]
 
 [ext_resource type="Script" path="res://Script/input_response.gd" id="1_mijah"]
+[ext_resource type="PackedScene" uid="uid://cwb2mhudsep7s" path="res://response.tscn" id="2_h041r"]
 
 [node name="InputResponse" type="VBoxContainer"]
 anchors_preset = 10
@@ -12,5 +13,5 @@ script = ExtResource("1_mijah")
 [node name="InputHistory" type="Label" parent="."]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="response" parent="." instance=ExtResource("2_h041r")]
 layout_mode = 2
