@@ -33,6 +33,7 @@ func change_image() :
 				0 :
 					emit_signal("event1")
 			emit_signal("specialimage")
+			emit_signal("queststart")
 		texture = load(image_list[random_index])  # Load the texture from the path
 
 

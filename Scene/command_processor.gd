@@ -15,9 +15,10 @@ func intialize(startingpoint) :
 
 func parse(input:String) :
 	if questsignal and respondedproperly :
-		if event1 :
-			return quest1(input)
+		print("jalan")
+		return quest1(input)
 	else :
+		print("switch priority")
 		match input :
 			"start" :
 				return start(input)
@@ -53,7 +54,7 @@ func respond(input:String) :
 		if event1 :
 			quest1(input)
 			respondedproperly=true
-			print(respondedproperly)
+			print("respondedproperly")
 		return "tell what you want"
 	else :
 		emit_signal("changeimage")
@@ -93,3 +94,4 @@ func quest1(input:String) :
 
 func _on_image_queststart() -> void:
 	questsignal=true
+	print("quest jalan")
