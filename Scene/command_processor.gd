@@ -18,7 +18,6 @@ func parse(input:String) :
 		print("jalan")
 		return quest1(input)
 	else :
-		print("switch priority")
 		match input :
 			"start" :
 				return start(input)
@@ -90,6 +89,8 @@ func quest1(input:String) :
 			return "your start to fight it "
 		_:
 			emit_signal("changeimage")
+			respondedproperly=false
+			event1=false
 			return "you are afraid to move forward"
 
 func _on_image_queststart() -> void:

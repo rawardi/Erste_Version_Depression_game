@@ -42,4 +42,3 @@ func change_image() :
 
 func _on_command_processor_changeimage() -> void:
 	change_image()
-	print("signal recieved")
