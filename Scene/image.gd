@@ -1,4 +1,4 @@
-extends Sprite2D
+extends TextureRect
 
 signal specialimage
 signal normalimage
@@ -6,14 +6,16 @@ signal event1
 signal queststart
 var images = {
 	"normal": [
-		"res://Image/icon.svg"
+		"res://Image/icon.svg",
+		"res://Image/funny-serious-cat-animal-meme_23-2148974916.jpg"
 	],
 	"special": [
-		"res://Image/funny-serious-cat-animal-meme_23-2148974916.jpg"
+		"res://Image/parents.jpeg",
 	]
 }
 func _ready() -> void:
 	randomize()
+
 
 func change_image() :
 		var randomizing_key = randi_range(0,100)

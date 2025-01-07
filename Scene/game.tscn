@@ -46,8 +46,9 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Image" type="Sprite2D" parent="PanelContainer/MarginContainer/VBoxContainer/Picture"]
-position = Vector2(68, 73)
+[node name="Image" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/Picture"]
+layout_mode = 2
+expand_mode = 5
 script = ExtResource("3_y1cfv")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer/Picture"]
@@ -63,10 +64,11 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="PanelContainer/MarginContainer/VBoxContainer/input"]
 layout_mode = 2
 
-[connection signal="child_entered_tree" from="." to="PanelContainer/MarginContainer/VBoxContainer/Picture/Image" method="_on_game_child_entered_tree"]
 [connection signal="gamestart" from="." to="CommandProcessor" method="_on_game_gamestart"]
-[connection signal="gamestart" from="." to="PanelContainer/MarginContainer/VBoxContainer/Picture/Image" method="_on_game_gamestart"]
+[connection signal="changeimage" from="CommandProcessor" to="CommandProcessor" method="_on_changeimage"]
 [connection signal="changeimage" from="CommandProcessor" to="PanelContainer/MarginContainer/VBoxContainer/Picture/Image" method="_on_command_processor_changeimage"]
+[connection signal="next_story" from="CommandProcessor" to="CommandProcessor" method="_on_next_story"]
+[connection signal="reset" from="CommandProcessor" to="CommandProcessor" method="_on_reset"]
 [connection signal="event1" from="PanelContainer/MarginContainer/VBoxContainer/Picture/Image" to="CommandProcessor" method="_on_image_event_1"]
 [connection signal="normalimage" from="PanelContainer/MarginContainer/VBoxContainer/Picture/Image" to="CommandProcessor" method="_on_image_normalimage"]
 [connection signal="queststart" from="PanelContainer/MarginContainer/VBoxContainer/Picture/Image" to="CommandProcessor" method="_on_image_queststart"]

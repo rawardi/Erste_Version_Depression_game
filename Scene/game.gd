@@ -19,7 +19,7 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 	#Adding and showing what the Player input 
 	var input_response=InputResponse.instantiate()
 	var response=commandprocessor.parse(new_text)
-	input_response.set_text(new_text, response)
+	input_response.set_text(new_text,response)
 	write_game_response(input_response)
 	if start  :
 		emit_signal("gamestart")
